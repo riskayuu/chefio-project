@@ -1,0 +1,57 @@
+name: chefio
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Menggunakan versi yang lebih fleksibel >=3.0.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # --- PAKET UTAMA APLIKASI ---
+  # Untuk ikon gaya iOS
+  cupertino_icons: ^1.0.8 
+  
+  # Backend service yang sudah Anda gunakan 
+  supabase_flutter: ^2.9.1 
+  
+  # [DITAMBAHKAN] Untuk menggunakan font dari Google dengan mudah (seperti Poppins)
+  google_fonts: ^6.2.1 
+  
+  # [DITAMBAHKAN] Untuk memilih gambar dari galeri atau kamera
+  image_picker: ^1.1.2 
+
+   # Permission handler for camera/gallery access
+  permission_handler: ^11.3.0
+  # HTTP for network requests (if needed)
+  http: ^1.2.1
+  smooth_page_indicator: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  provider: ^6.1.1               
+  shared_preferences: ^2.2.2  
+
+  flutter_lints: ^4.0.0 # Versi disesuaikan dengan paket lain
+
+# Bagian khusus untuk Flutter
+flutter:
+  uses-material-design: true
+
+  # Aset gambar Anda sudah terdaftar dengan benar
+  assets:
+    - images/
+
+  # [DIHAPUS] Bagian font manual dihapus karena kita menggunakan google_fonts
+  # Ini cara yang lebih direkomendasikan dan lebih sederhana.
+  # Anda tidak perlu lagi menyimpan file .ttf di dalam proyek.
+  #
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: fonts/Poppins-Bold.ttf 
+  #       - asset: fonts/Poppins-Light.ttf
